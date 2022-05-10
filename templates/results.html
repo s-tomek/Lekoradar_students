@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Wyniki dla {{request.args.get('sub')}}{% endblock %}
+{% block content %}
+<style>
+    table {
+      padding-left: 25px;
+      table-layout: auto;
+      width: 50%;
+    }
+</style>
+
+<h5> Wyniki dla {{request.args.get('sub')}} </h5>
+<p>
+
+
+<table>
+    {% for row in table %}
+        {% if loop.index == 1 %}
+            <tr style="background-color: #2874a6;color:white;">
+            {% for el in row %}
+                <td> {{el}} </td>
+            {% endfor %}
+            </tr>
+        {% else %}
+            <tr>
+            {% for el in row %}
+                <td> {{el}} </td>
+            {% endfor %}
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/" > powrót do wyboru substancji </a>
+</p>
+
+{% endblock %}
