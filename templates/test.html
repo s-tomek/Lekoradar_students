@@ -1,16 +1,10 @@
-<html>
-    <meta charset="utf-8">
-    <head>
-        <title>Wyszukiwarka</title>
-    </head>
-    <body>
-    <br>
-    <h2> Lekoradar - porównywarka leków </h2>
-    <body>
+{% extends "base.html" %}
+
+{% block title %}Wyniki dla {{request.args.get('sub')}}{% endblock %}
+{% block content %}
         works or doesnt work
         {% for i in range(10) %}
-        {{i}}a
+        {{i}}asssvv
         {% endfor %}
         {{lol}}
-    </body>
-</html>
+{% endblock %}

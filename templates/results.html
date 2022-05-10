@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Wyniki dla {{request.args.get('sub')}}{% endblock %}
+{% block title %}Wyniki dla {{sub}}{% endblock %}
 {% block content %}
 <style>
     table {
@@ -10,7 +10,7 @@
     }
 </style>
 
-<h5> Wyniki dla {{request.args.get('sub')}} </h5>
+<h5> Wyniki dla {{sub}} </h5>
 <p>
 
 
@@ -34,7 +34,6 @@
 
 <br>
 
-<a href="{{ url_for('admin') }}" > powrót do wyboru substancji </a>
 </p>
 
 {% endblock %}

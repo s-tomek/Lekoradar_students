@@ -22,8 +22,8 @@ def admin_home():
 def results():
     # TODO tutaj wstawiam funkcję od Asi, która zwraca tabelę wynikową dla konkretnej substancji aktywnej
     # result_table = get_result_table(request.args.get('sub'))
-    result_table = [[request.args.get('subs'), "h2", "h3", "h4"], ["a", "b", "c", "d"], ["e", "f", "g", "h"], ["i", "j", "k", "l"]]
-    return render_template("results.html", table=result_table)
+    result_table = [["h1", "h2", "h3", "h4"], ["a", "b", "c", "d"], ["e", "f", "g", "h"], ["i", "j", "k", "l"]]
+    return render_template("results.html", table=result_table, sub=request.args.get('sub'))
 
 if __name__ == "__main__":
    app.run(debug=True)
