@@ -12,11 +12,10 @@ app.config['SECRET_KEY'] = "2b3f12f3ef12a6c86b"
 
 
 @app.route('/admin')
-def admin_home():
+def admin():
     # substances = ['a', 'b', 'c', 'd']
     substances = get_substance_table()
     return render_template("home.html", substances=substances)
-    # return render_template("test.html")
 
 @app.route("/results")
 def results():
