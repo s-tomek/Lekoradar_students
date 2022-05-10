@@ -1,4 +1,4 @@
-<!-- {% extends "base.html" %}
+{% extends "base.html" %}
 {% block title %}Wyszukiwarka{% endblock %}
 {% block content %}
 <h5>
@@ -8,44 +8,9 @@
 <br>
 <table>
  {% for sub in substances %}
-   <tr> <td> <a href="/results?sub={{sub}}"> {{ sub }} </a> </td></tr>
+   <tr> <td> <a href="{{ url_for('results') }}"> {{ sub }} </a> </td></tr>
  {% endfor %}
 </table>
 </p>
 
-{% endblock %} -->
-
-
-<html>
-    <meta charset="utf-8">
-    <style>
-        h2, h5, p, table {
-            padding-left: 25px;
-        }
-
-        th, td {
-            border: 1px solid black;
-        }
-    </style>
-
-
-    <head>
-        <title>Wyszukiwarka</title>
-    </head>
-    <body>
-    <br>
-    <h2> Lekoradar - porównywarka leków </h2>
-    <hr style="height:2px;border:none;background-color:#333;" />
-    <h5>
-        Wybierz szukaną substancję aktywną:
-    </h5>
-    <p>
-    <br>
-    <table>
-     {% for sub in substances %}
-       <tr> <td> <a href="/admin?sub={{sub}}"> {{ sub }} </a> </td></tr>
-     {% endfor %}
-    </table>
-    </p>
-    </body>
-</html>
+{% endblock %}
