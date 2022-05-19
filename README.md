@@ -1,1 +1,1 @@
-próbujemy wrzucić stronę na students
+Lekoradar na stronie students
